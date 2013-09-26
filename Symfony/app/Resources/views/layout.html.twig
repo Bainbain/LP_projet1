@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{% block title %}Universite de Lorraine - IUT Metz{% endblock %}</title>
+		
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+            <link rel="stylesheet" href="{{ asset('css/bootstrap-wizard.css') }}" type="text/css" />
+            <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}" type="text/css" />
+            <link rel="stylesheet" href="{{ asset('css/datepicker.less') }}" type="text/css" />
+			<link rel="stylesheet" href="{{ asset('css/menu.css') }}" type="text/css" />
+			<script type="text/javascript" href="{{ asset('js/menu.js') }}"></script>
+		{% endblock %}
+	</head>
+	
+	<body style="font-size:13px">
+		<div class="container">
+			<div class="row">
+            	<div class="span1">
+                	<img src="{{ asset('img/UL-Logo.jpg') }}" alt="Logo UL" />   
+                </div>
+                <div class="span4" style="float:left">
+                	<p><b>Université de Lorraine</b></p>
+                    <small>Application intranet d'édition de documents</small>
+                </div>
+                <div class="span4 offset3">
+                	Ici se trouvera le bloc de connexion
+                </div>
+            </div>
+		
+			<div id="menuAccueil">
+				<ul class="nav nav-tabs">
+					<li><a href="#" >Attestations <i class="icon-chevron-down"></i></a>
+						<ul>
+							<li><a href="#"><i class="icon-cog"></i>Scolarité</a></li>
+							<li><a href="#"><i class="icon-tag"></i>Provisoire de diplôme</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Relevés <i class="icon-chevron-down"></i></a>
+						<ul >
+							<li><a href="#"><i class="icon-cog"></i>Notes Finales</a></li>
+							<li><a href="#"><i class="icon-tag"></i>Notes Provisoire</a></li>
+							<li><a href="#"><i class="icon-edit"></i>Notes sans logo</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Détails des notes</a></li>
+				</ul>
+			</div>
+			
+			<br /><br />
+			
+			<div class="row centerblanc">
+				<div id="menu" class="span3">
+                	<div class="well">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">ATTESTATIONS</li>
+                            <li><a href="#">Attestation de Scolarité</a></li>
+                            <li><a href="#">Attestation Provisoire de Diplôme</a></li>
+                            
+                            <li class="nav-header">RELEVÉS</li>
+                            <li><a href="#">Notes Finales</a></li>
+                            <li><a href="#">Notes Provisoires</a></li>
+							<li><a href="#">Notes sans Logo</a></li>
+                            
+                            <li class="nav-header">AUTRES</li>
+                            <li><a href="#">Détails des Notes</a></li>
+                        </ul>
+                    </div>
+				</div>
+				<div id="content" class="span9">
+					{% block body %}
+					{% endblock %}
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+            <div class="container">
+                <div class="row", style="background: none repeat scroll #FFEF44">
+                    <div class="span1">
+                        <center><img src="{{ asset('img/UL-Logo.jpg') }}" alt="Logo CkelProcess" /></center>
+                    </div>
+					<div class="span2">
+						<p>Mise en production par</p>
+						<br />
+						<p>Marie Nicole Locatelli<br />
+						Anthony Bainville<br />
+						Charles Pizel<br />
+						Mathieu Barbaras</p>
+						<p>&copy; Copyright 2013</p>
+					</div>
+                    <div class="span2">
+                        <ul class="nav nav-list">
+                            <li class="nav-header"><b>Attestations</b></li>
+                            <li><a href="#">Attestations de scolarité</a></li>
+                            <li><a href="#">Attestations provisoires de diplôme</a></li>
+                        </ul>
+                    </div>
+                    <div class="span2">
+                        <ul class="nav nav-list">
+                            <li class="nav-header"><b>Relevés</b></li>
+                            <li><a href="#">Relevés de notes finaux</a></li>
+                            <li><a href="#">Relevés de notes provisoires</a></li>
+							<li><a href="#">Relevés de notes sans logo</a></li>
+                        </ul>
+                    </div>
+                    <div class="span2">
+                        <ul class="nav nav-list">
+                            <li class="nav-header"><b>Autres</b></li>
+                            <li><a href="#">Détails des notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="span3" style="width: 60px;">
+                        <a target="_blank" href="#"><img src="{{ asset('img/twitter.png') }}" /></a>
+                        <a target="_blank" href="#"><img src="{{ asset('img/facebook.png') }}" /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+            
+    {% block docedit_dody %}
+	{% endblock %}
+		
+	{% block javascripts %}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap-wizard.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap-wizard.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+        <script type="text/javascript">
+			$(function() {
+				$( "#datepicker" ).datepicker();
+			});
+		</script>
+	{% endblock %}
+    
+    {% block scripts %}
+    {% endblock %}
+	
+	</body>
+</html>
+			
+		
+			
+		

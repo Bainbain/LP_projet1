@@ -1,0 +1,83 @@
+#menuAccueil, #menuAccueil ul
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 21px;
+	text-align: center;
+}
+
+#menuAccueil
+{
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+#menuAccueil a
+{
+	display; block;
+	padding: 0;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	width: 144px;
+	text-align: center;	
+}
+
+#menuAccueil li
+{
+	float: left;
+	/* pour IE qui ne reconnait pas "transparent" */
+	border-right: 1px solid #fff;
+}
+
+html>body #menuAccueil li
+{
+	border-right: 1px solid transparent;	
+}
+
+#menuAccueil li ul
+{
+	position: absolute;
+	width: 144px;
+	left: -999em;	
+}
+
+#menuAccueil li ul li
+{
+	border-top: 1px solid #fff;	
+}
+
+html>body #menuAccueil li ul li
+{
+	border-top: 1px solid transparent;	
+}
+
+#menuAccueil li ul ul
+{
+	margin: -22px 0 0 144px;
+	border-left: 1px solid #fff;	
+}
+
+html>body #menuAccueil li ul ul
+{
+	border-left: 1px solid transparent;	
+}
+
+#menuAccueil a:hover
+{
+	color: #000;
+	background: #fff;
+}
+
+#menuAccueil li:hover ul ul, #menuAccueil li.sfhover ul ul
+{
+	left: -999em;	
+}
+
+#menuAccueil li:hover ul, #menuAccueil li li:hover ul, #menuAccueil li.sfhover ul, #menuAccueil li li.sfhover ul
+{
+	left: auto;
+	min-height: 0;
+}

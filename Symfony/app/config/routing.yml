@@ -1,0 +1,8 @@
+projet_projet:
+    resource: "@ProjetProjetBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sdz_blog:
+    resource: "@SdzBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+

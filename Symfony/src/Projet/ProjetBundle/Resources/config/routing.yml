@@ -1,0 +1,7 @@
+projet_projet_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ProjetProjetBundle:Default:index }
+
+projet_projet_accueil:
+    path:     /accueil
+    defaults: { _controller: ProjetProjetBundle:Projet:accueil }
