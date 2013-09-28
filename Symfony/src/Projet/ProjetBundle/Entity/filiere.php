@@ -1,0 +1,274 @@
+<?php
+
+namespace Projet\ProjetBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * filiere
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Projet\ProjetBundle\Entity\filiereRepository")
+ */
+class filiere
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fil_code", type="string", length=255)
+     */
+    private $filCode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fil_libelle", type="string", length=255)
+     */
+    private $filLibelle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fil_detail", type="string", length=255)
+     */
+    private $filDetail;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="resp_id", type="integer")
+     */
+    private $respId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fil_type", type="string", length=255)
+     */
+    private $filType;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="assist_id", type="integer")
+     */
+    private $assistId;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fil_debut", type="datetime")
+     */
+    private $filDebut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fil_fin", type="datetime")
+     */
+    private $filFin;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set filCode
+     *
+     * @param string $filCode
+     * @return filiere
+     */
+    public function setFilCode($filCode)
+    {
+        $this->filCode = $filCode;
+    
+        return $this;
+    }
+
+    /**
+     * Get filCode
+     *
+     * @return string 
+     */
+    public function getFilCode()
+    {
+        return $this->filCode;
+    }
+
+    /**
+     * Set filLibelle
+     *
+     * @param string $filLibelle
+     * @return filiere
+     */
+    public function setFilLibelle($filLibelle)
+    {
+        $this->filLibelle = $filLibelle;
+    
+        return $this;
+    }
+
+    /**
+     * Get filLibelle
+     *
+     * @return string 
+     */
+    public function getFilLibelle()
+    {
+        return $this->filLibelle;
+    }
+
+    /**
+     * Set filDetail
+     *
+     * @param string $filDetail
+     * @return filiere
+     */
+    public function setFilDetail($filDetail)
+    {
+        $this->filDetail = $filDetail;
+    
+        return $this;
+    }
+
+    /**
+     * Get filDetail
+     *
+     * @return string 
+     */
+    public function getFilDetail()
+    {
+        return $this->filDetail;
+    }
+
+    /**
+     * Set respId
+     *
+     * @param integer $respId
+     * @return filiere
+     */
+    public function setRespId($respId)
+    {
+        $this->respId = $respId;
+    
+        return $this;
+    }
+
+    /**
+     * Get respId
+     *
+     * @return integer 
+     */
+    public function getRespId()
+    {
+        return $this->respId;
+    }
+
+    /**
+     * Set filType
+     *
+     * @param string $filType
+     * @return filiere
+     */
+    public function setFilType($filType)
+    {
+        $this->filType = $filType;
+    
+        return $this;
+    }
+
+    /**
+     * Get filType
+     *
+     * @return string 
+     */
+    public function getFilType()
+    {
+        return $this->filType;
+    }
+
+    /**
+     * Set assistId
+     *
+     * @param integer $assistId
+     * @return filiere
+     */
+    public function setAssistId($assistId)
+    {
+        $this->assistId = $assistId;
+    
+        return $this;
+    }
+
+    /**
+     * Get assistId
+     *
+     * @return integer 
+     */
+    public function getAssistId()
+    {
+        return $this->assistId;
+    }
+
+    /**
+     * Set filDebut
+     *
+     * @param \DateTime $filDebut
+     * @return filiere
+     */
+    public function setFilDebut($filDebut)
+    {
+        $this->filDebut = $filDebut;
+    
+        return $this;
+    }
+
+    /**
+     * Get filDebut
+     *
+     * @return \DateTime 
+     */
+    public function getFilDebut()
+    {
+        return $this->filDebut;
+    }
+
+    /**
+     * Set filFin
+     *
+     * @param \DateTime $filFin
+     * @return filiere
+     */
+    public function setFilFin($filFin)
+    {
+        $this->filFin = $filFin;
+    
+        return $this;
+    }
+
+    /**
+     * Get filFin
+     *
+     * @return \DateTime 
+     */
+    public function getFilFin()
+    {
+        return $this->filFin;
+    }
+}

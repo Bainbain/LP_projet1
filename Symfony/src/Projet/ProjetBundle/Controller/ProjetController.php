@@ -10,5 +10,6 @@ class ProjetController extends Controller
 	public function accueilAction()
 	{
 		return $this->render('ProjetProjetBundle:Projet:projet.html.twig');
+		
 	}
 }

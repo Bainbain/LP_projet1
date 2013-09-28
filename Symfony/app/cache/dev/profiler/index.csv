@@ -45,3 +45,5 @@ cf1e14,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/accueil,1379951548
 879378,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/,1380093600,
 563ebb,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/accueil,1380093607,
 fdab8f,127.0.0.1,GET,http://localhost/Symfony/web/app_dev.php/accueil,1380093778,
+3b30e3,127.0.0.1,GET,http://127.0.0.1/LP_projet1/Symfony/web/app_dev.php/accueil,1380368200,
+4b9598,127.0.0.1,GET,http://127.0.0.1/LP_projet1/Symfony/web/app_dev.php/accueil,1380368372,
