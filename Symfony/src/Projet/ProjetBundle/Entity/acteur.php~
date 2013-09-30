@@ -667,44 +667,4 @@ class acteur
     {
         return $this->contratAct;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->filieres = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add filieres
-     *
-     * @param \Projet\ProjetBundle\Entity\filiere $filieres
-     * @return acteur
-     */
-    public function addFiliere(\Projet\ProjetBundle\Entity\filiere $filieres)
-    {
-        $this->filieres[] = $filieres;
-    
-        return $this;
-    }
-
-    /**
-     * Remove filieres
-     *
-     * @param \Projet\ProjetBundle\Entity\filiere $filieres
-     */
-    public function removeFiliere(\Projet\ProjetBundle\Entity\filiere $filieres)
-    {
-        $this->filieres->removeElement($filieres);
-    }
-
-    /**
-     * Get filieres
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getFilieres()
-    {
-        return $this->filieres;
-    }
 }

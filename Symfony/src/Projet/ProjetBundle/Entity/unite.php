@@ -55,6 +55,12 @@ class unite
      * @ORM\Column(name="fil_id", type="integer")
      */
     private $filId;
+	
+	/**
+	 * @ORM\ManyToOne(targetEntity="Projet\ProjetBundle\Entity\filiere")
+     * @ORM\JoinColumn(nullable=false)
+     */
+	private $unite;
 
 
     /**
