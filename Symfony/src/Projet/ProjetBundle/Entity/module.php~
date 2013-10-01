@@ -157,27 +157,4 @@ class module
     {
         return $this->uniteId;
     }
-
-    /**
-     * Set unite
-     *
-     * @param \Projet\ProjetBundle\Entity\unite $unite
-     * @return module
-     */
-    public function setUnite(\Projet\ProjetBundle\Entity\unite $unite)
-    {
-        $this->unite = $unite;
-    
-        return $this;
-    }
-
-    /**
-     * Get unite
-     *
-     * @return \Projet\ProjetBundle\Entity\unite 
-     */
-    public function getUnite()
-    {
-        return $this->unite;
-    }
 }

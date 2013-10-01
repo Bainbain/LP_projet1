@@ -127,27 +127,4 @@ class controle
     {
         return $this->ensId;
     }
-
-    /**
-     * Set enseignement
-     *
-     * @param \Projet\ProjetBundle\Entity\enseignement $enseignement
-     * @return controle
-     */
-    public function setEnseignement(\Projet\ProjetBundle\Entity\enseignement $enseignement)
-    {
-        $this->enseignement = $enseignement;
-    
-        return $this;
-    }
-
-    /**
-     * Get enseignement
-     *
-     * @return \Projet\ProjetBundle\Entity\enseignement 
-     */
-    public function getEnseignement()
-    {
-        return $this->enseignement;
-    }
 }
