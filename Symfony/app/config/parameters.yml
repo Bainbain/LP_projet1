@@ -4,7 +4,7 @@ parameters:
     database_port:     3306
     database_name:     bainvill2u_LP_projet
     database_user:     bainvill2u_appli
-    database_password: bainbain		
+    database_password: 31114627	
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1

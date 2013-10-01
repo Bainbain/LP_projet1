@@ -172,8 +172,14 @@ class acteur
 	/**
 	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\filiere", cascade={"persist"})
 	 */
-  private $filieres;
-
+  	private $filieres;
+	
+	/**
+	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\groupe", cascade={"persist"})
+	 */
+  	
+	private $groupes;
+	
 
     /**
      * Get id
