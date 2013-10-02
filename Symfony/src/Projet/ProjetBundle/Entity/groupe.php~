@@ -150,27 +150,4 @@ class groupe
     {
         return $this->grpPere;
     }
-
-    /**
-     * Set filiere
-     *
-     * @param \Projet\ProjetBundle\Entity\filiere $filiere
-     * @return groupe
-     */
-    public function setFiliere(\Projet\ProjetBundle\Entity\filiere $filiere)
-    {
-        $this->filiere = $filiere;
-    
-        return $this;
-    }
-
-    /**
-     * Get filiere
-     *
-     * @return \Projet\ProjetBundle\Entity\filiere 
-     */
-    public function getFiliere()
-    {
-        return $this->filiere;
-    }
 }

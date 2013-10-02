@@ -34,13 +34,20 @@ class controle
      * @ORM\Column(name="ctrl_coef", type="integer")
      */
     private $ctrlCoef;
-
-    /**
-     * @var integer
+	
+	/**
+     * @var string
      *
-     * @ORM\Column(name="ens_id", type="integer")
+     * @ORM\Column(name="ctrl_titre", type="string", length=255)
      */
-    private $ensId;
+    private $ctrl_titre;
+	
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="ctrl_detail", type="string", length=255)
+     */
+    private $ctrl_detail;
 
 	/**
 	 * @ORM\ManyToOne(targetEntity="Projet\ProjetBundle\Entity\enseignement")
@@ -149,5 +156,51 @@ class controle
     public function getEnseignement()
     {
         return $this->enseignement;
+    }
+
+    /**
+     * Set ctrl_titre
+     *
+     * @param string $ctrlTitre
+     * @return controle
+     */
+    public function setCtrlTitre($ctrlTitre)
+    {
+        $this->ctrl_titre = $ctrlTitre;
+    
+        return $this;
+    }
+
+    /**
+     * Get ctrl_titre
+     *
+     * @return string 
+     */
+    public function getCtrlTitre()
+    {
+        return $this->ctrl_titre;
+    }
+
+    /**
+     * Set ctrl_detail
+     *
+     * @param string $ctrlDetail
+     * @return controle
+     */
+    public function setCtrlDetail($ctrlDetail)
+    {
+        $this->ctrl_detail = $ctrlDetail;
+    
+        return $this;
+    }
+
+    /**
+     * Get ctrl_detail
+     *
+     * @return string 
+     */
+    public function getCtrlDetail()
+    {
+        return $this->ctrl_detail;
     }
 }

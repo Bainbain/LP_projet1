@@ -137,13 +137,6 @@ class acteur
     /**
      * @var integer
      *
-     * @ORM\Column(name="fil_id", type="integer")
-     */
-    private $filId;
-
-    /**
-     * @var integer
-     *
      * @ORM\Column(name="nbconnect_act", type="integer")
      */
     private $nbconnectAct;
@@ -172,8 +165,19 @@ class acteur
 	/**
 	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\filiere", cascade={"persist"})
 	 */
-  private $filieres;
-
+  	private $filieres;
+	
+	/**
+	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\groupe", cascade={"persist"})
+	 */
+  	
+	private $groupes;
+	
+	/**
+	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\enseignement", cascade={"persist"})
+	 */
+	private $enseignements;
+	
 
     /**
      * Get id
@@ -706,5 +710,38 @@ class acteur
     public function getFilieres()
     {
         return $this->filieres;
+    }
+
+    /**
+     * Add groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     * @return acteur
+     */
+    public function addGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes[] = $groupes;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     */
+    public function removeGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes->removeElement($groupes);
+    }
+
+    /**
+     * Get groupes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupes()
+    {
+        return $this->groupes;
     }
 }

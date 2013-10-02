@@ -41,20 +41,12 @@ class module
      * @ORM\Column(name="mod_coef", type="integer")
      */
     private $modCoef;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="unite_id", type="integer")
-     */
-    private $uniteId;
 	
 	/**
 	 * @ORM\ManyToOne(targetEntity="Projet\ProjetBundle\Entity\unite")
      * @ORM\JoinColumn(nullable=false)
      */
 	private $unite;
-
 
     /**
      * Get id

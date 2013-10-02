@@ -137,13 +137,6 @@ class acteur
     /**
      * @var integer
      *
-     * @ORM\Column(name="fil_id", type="integer")
-     */
-    private $filId;
-
-    /**
-     * @var integer
-     *
      * @ORM\Column(name="nbconnect_act", type="integer")
      */
     private $nbconnectAct;
@@ -712,5 +705,71 @@ class acteur
     public function getFilieres()
     {
         return $this->filieres;
+    }
+
+    /**
+     * Add groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     * @return acteur
+     */
+    public function addGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes[] = $groupes;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     */
+    public function removeGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes->removeElement($groupes);
+    }
+
+    /**
+     * Get groupes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupes()
+    {
+        return $this->groupes;
+    }
+
+    /**
+     * Add enseignements
+     *
+     * @param \Projet\ProjetBundle\Entity\enseignement $enseignements
+     * @return acteur
+     */
+    public function addEnseignement(\Projet\ProjetBundle\Entity\enseignement $enseignements)
+    {
+        $this->enseignements[] = $enseignements;
+    
+        return $this;
+    }
+
+    /**
+     * Remove enseignements
+     *
+     * @param \Projet\ProjetBundle\Entity\enseignement $enseignements
+     */
+    public function removeEnseignement(\Projet\ProjetBundle\Entity\enseignement $enseignements)
+    {
+        $this->enseignements->removeElement($enseignements);
+    }
+
+    /**
+     * Get enseignements
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEnseignements()
+    {
+        return $this->enseignements;
     }
 }

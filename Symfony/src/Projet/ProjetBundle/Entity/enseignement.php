@@ -21,27 +21,6 @@ class enseignement
      */
     private $id;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="grp_id", type="integer")
-     */
-    private $grpId;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="mod_id", type="integer")
-     */
-    private $modId;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="form_id", type="integer")
-     */
-    private $formId;
-
 	/**
 	 * @ORM\ManyToOne(targetEntity="Projet\ProjetBundle\Entity\module")
      * @ORM\JoinColumn(nullable=false)
@@ -50,11 +29,14 @@ class enseignement
 	private $module;
 	
 	/**
-	 * @ORM\ManyToOne(targetEntity="Projet\ProjetBundle\Entity\groupe")
-     * @ORM\JoinColumn(nullable=false)
-     */
-	private $groupe;
+	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\groupe", cascade={"persist"})
+	 */
+	private $groupes;
     
+	/**
+	 * @ORM\ManyToMany(targetEntity="Projet\ProjetBundle\Entity\acteur", cascade={"persist"})
+	 */
+	private $acteurs_form;
 	
 	/**
      * Get id
@@ -179,5 +161,45 @@ class enseignement
     public function getGroupe()
     {
         return $this->groupe;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->groupes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     * @return enseignement
+     */
+    public function addGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes[] = $groupes;
+    
+        return $this;
+    }
+
+    /**
+     * Remove groupes
+     *
+     * @param \Projet\ProjetBundle\Entity\groupe $groupes
+     */
+    public function removeGroupe(\Projet\ProjetBundle\Entity\groupe $groupes)
+    {
+        $this->groupes->removeElement($groupes);
+    }
+
+    /**
+     * Get groupes
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getGroupes()
+    {
+        return $this->groupes;
     }
 }
