@@ -5,3 +5,7 @@ projet_projet_homepage:
 projet_projet_accueil:
     path:     /accueil
     defaults: { _controller: ProjetProjetBundle:Projet:accueil }
+
+projet_projet_attestation_scolarite:
+    path:     /attestation_scolarite
+    defaults: { _controller: ProjetProjetBundle:Projet:scolarite }

@@ -51,27 +51,14 @@
 			<br /><br />
 			
 			<div class="row centerblanc">
-				<div id="menu" class="span3">
-                	<div class="well">
-                        <ul class="nav nav-list">
-                            <li class="nav-header">ATTESTATIONS</li>
-                            <li><a href="#">Attestation de Scolarité</a></li>
-                            <li><a href="#">Attestation Provisoire de Diplôme</a></li>
-                            
-                            <li class="nav-header">RELEVÉS</li>
-                            <li><a href="#">Notes Finales</a></li>
-                            <li><a href="#">Notes Provisoires</a></li>
-							<li><a href="#">Notes sans Logo</a></li>
-                            
-                            <li class="nav-header">AUTRES</li>
-                            <li><a href="#">Détails des Notes</a></li>
-                        </ul>
-                    </div>
-				</div>
-				<div id="content" class="span9">
-					{% block body %}
-					{% endblock %}
-				</div>
+				
+				
+				{% block body %}
+				{% endblock %}
+				{% block docedit_body %}
+		
+				{% endblock %}
+				
 			</div>
 		</div>
 		
@@ -119,9 +106,7 @@
             </div>
         </footer>
             
-    {% block docedit_dody %}
-		
-	{% endblock %}
+
 		
 	{% block javascripts %}
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>

@@ -211,9 +211,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_projet_homepage')), array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\DefaultController::indexAction',));
         }
 
-        // projet_projet_accueil
-        if ($pathinfo === '/accueil') {
-            return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::accueilAction',  '_route' => 'projet_projet_accueil',);
+        if (0 === strpos($pathinfo, '/a')) {
+            // projet_projet_accueil
+            if ($pathinfo === '/accueil') {
+                return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::accueilAction',  '_route' => 'projet_projet_accueil',);
+            }
+
+            // projet_projet_attestation_scolarite
+            if ($pathinfo === '/attestation_scolarite') {
+                return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::scolariteAction',  '_route' => 'projet_projet_attestation_scolarite',);
+            }
+
         }
 
         // sdz_blog_homepage
