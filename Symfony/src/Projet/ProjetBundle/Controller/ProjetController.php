@@ -15,11 +15,11 @@ class ProjetController extends Controller
 	
 	public function scolariteAction()
 	{
-		//acces a la base infodb2
-		$em = $this-> getDoctrine()-> getEntityManager();
-		
-		//recupération de tous les acteurs 
-		$acteurs = $em->getRepository('ProjetProjetBundle:acteur')->findAll();
+		$repository = $this->getDoctrine()
+                   ->getManager()
+                   ->getRepository('ProjetProjetBundle:acteur');
+ 
+		$acteurs = $repository->findAll();
   		
 		return $this->render('ProjetProjetBundle:Projet:attestation_scolarite.html.twig', array('acteurs' => $acteurs));
 		
