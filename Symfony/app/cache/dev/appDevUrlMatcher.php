@@ -211,17 +211,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_projet_homepage')), array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\DefaultController::indexAction',));
         }
 
-        if (0 === strpos($pathinfo, '/a')) {
-            // projet_projet_accueil
-            if ($pathinfo === '/accueil') {
-                return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::accueilAction',  '_route' => 'projet_projet_accueil',);
-            }
+        // projet_projet_accueil
+        if ($pathinfo === '/accueil') {
+            return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::accueilAction',  '_route' => 'projet_projet_accueil',);
+        }
 
-            // projet_projet_attestation_scolarite
-            if ($pathinfo === '/attestation_scolarite') {
-                return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::scolariteAction',  '_route' => 'projet_projet_attestation_scolarite',);
-            }
+        // projet_projet_attestation_scolarite
+        if (preg_match('#^/(?P<id>[^/]++)/attestation\\-scolarite$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'projet_projet_attestation_scolarite')), array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::scolariteAction',));
+        }
 
+        // projet_projet_connexion
+        if ($pathinfo === '/connexion') {
+            return array (  '_controller' => 'Projet\\ProjetBundle\\Controller\\ProjetController::connexionAction',  '_route' => 'projet_projet_connexion',);
         }
 
         // sdz_blog_homepage

@@ -7,5 +7,9 @@ projet_projet_accueil:
     defaults: { _controller: ProjetProjetBundle:Projet:accueil }
 
 projet_projet_attestation_scolarite:
-    path:     /attestation_scolarite
+    path:     /{id}/attestation-scolarite
     defaults: { _controller: ProjetProjetBundle:Projet:scolarite }
+
+projet_projet_connexion:
+    path:     /connexion
+    defaults: { _controller: ProjetProjetBundle:Projet:connexion }

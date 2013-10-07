@@ -159,29 +159,6 @@ class unite
     }
 
     /**
-     * Set filId
-     *
-     * @param integer $filId
-     * @return unite
-     */
-    public function setFilId($filId)
-    {
-        $this->filId = $filId;
-    
-        return $this;
-    }
-
-    /**
-     * Get filId
-     *
-     * @return integer 
-     */
-    public function getFilId()
-    {
-        return $this->filId;
-    }
-
-    /**
      * Set unite
      *
      * @param \Projet\ProjetBundle\Entity\filiere $unite

@@ -30,7 +30,7 @@
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_driver">pdo_mysql</parameter>
     <parameter key="database_host">localhost</parameter>
-    <parameter key="database_port">3306</parameter>
+    <parameter key="database_port">8080</parameter>
     <parameter key="database_name">bainvill2u_LP_projet</parameter>
     <parameter key="database_user">bainvill2u_appli</parameter>
     <parameter key="database_password">31114627</parameter>
@@ -489,8 +489,8 @@
     <parameter key="jms_di_extra.disable_grep">false</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
     <parameter key="jms_di_extra.cache_warmer.controller_file_blacklist" type="collection"/>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/LP_projet1/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_524d6bbc1e140.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager524d6bbc1e140_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">C:/wamp/www/LP_projet1/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_525022424297e.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager525022424297e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -2214,7 +2214,7 @@
       <argument type="collection">
         <argument key="dbname">bainvill2u_LP_projet</argument>
         <argument key="host">localhost</argument>
-        <argument key="port">3306</argument>
+        <argument key="port">8080</argument>
         <argument key="user">bainvill2u_appli</argument>
         <argument key="password">31114627</argument>
         <argument key="charset">UTF8</argument>
@@ -2270,8 +2270,8 @@
       <argument type="collection"/>
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager524d6bbc1e140_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>C:/wamp/www/LP_projet1/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_524d6bbc1e140.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager525022424297e_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>C:/wamp/www/LP_projet1/Symfony/app/cache/dev/jms_diextra/doctrine/EntityManager_525022424297e.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>

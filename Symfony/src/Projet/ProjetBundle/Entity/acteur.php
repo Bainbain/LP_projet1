@@ -550,30 +550,7 @@ class acteur
     public function getMaId()
     {
         return $this->maId;
-    }
-
-    /**
-     * Set filId
-     *
-     * @param integer $filId
-     * @return acteur
-     */
-    public function setFilId($filId)
-    {
-        $this->filId = $filId;
-    
-        return $this;
-    }
-
-    /**
-     * Get filId
-     *
-     * @return integer 
-     */
-    public function getFilId()
-    {
-        return $this->filId;
-    }
+	}
 
     /**
      * Set nbconnectAct
